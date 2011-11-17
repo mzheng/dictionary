@@ -4,12 +4,12 @@
 	<meta charset="UTF-8" />
 	<meta name="description" content="An open source Dictionary based on Google's Unofficial Dictionary API" />
 	<title>Dictionary</title>
-	<link rel="apple-touch-icon" href="/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-<!--[if lt IE 9]>
+<!--[if IE 8]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 	<script type="text/javascript">
@@ -306,23 +306,6 @@
 	}
 
 	dict = {
-		firstrun: function(){
-			window.onhashchange = hash.change.callback;
-			search.options = new Array();
-			for(var i in config.lang.data) {
-				search.options[i] = document.createElement("option");
-				search.options[i].value = config.lang.data[i].sl + config.indicator.lang + config.lang.data[i].tl;
-				search.options[i].text = config.lang.data[i].text;
-				document.getElementById("lang").add(search.options[i], null);
-			}
-			sound.test();
-			if(window.location.hash) {
-				search.match();
-				dict.init();
-			} else {
-				search.lang.set(config.lang.defaultdata);
-			}
-		},
 		init: function(){
 			$("#dictonary").empty();
 			var query = hash.query.get();
@@ -560,7 +543,21 @@
 	}
 	
 	$(document).ready(function() {
-		dict.firstrun();
+		window.onhashchange = hash.change.callback;
+		search.options = new Array();
+		for(var i in config.lang.data) {
+			search.options[i] = document.createElement("option");
+			search.options[i].value = config.lang.data[i].sl + config.indicator.lang + config.lang.data[i].tl;
+			search.options[i].text = config.lang.data[i].text;
+			document.getElementById("lang").add(search.options[i], null);
+		}
+		sound.test();
+		if(window.location.hash) {
+			search.match();
+			dict.init();
+		} else {
+			search.lang.set(config.lang.defaultdata);
+		}
 	});	
 	
 	</script>
