@@ -215,7 +215,7 @@ div.webDefinitions>div.meaning>div.terms {
 	margin-bottom: 6px;
 }
 div.webDefinitions>div.meaning>a {
-	display: block;
+	display: inline-block;
 	margin-bottom: 16px;
 }
 [title=Phonetic] {

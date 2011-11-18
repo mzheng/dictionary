@@ -472,6 +472,18 @@
 						return pair.sl;
 					break;
 				}
+			},
+			shorthl: function() {
+				var pair = search.lang.get();
+				switch(pair.sl) {
+					case "zh-hans":
+					case "zh-hant":
+						return "zh";
+					break;
+					default:
+						return pair.sl;
+					break;
+				}
 			}
 		},
 		match: function() {
@@ -567,15 +579,15 @@
 		$("#query").autocomplete({
 			source: function( request, response ) {
 				$.ajax({
-					url: "http://www.google.com/complete/search", // Need a better one here!
+					url: "http://" + search.lang.shorthl() + ".wiktionary.org/w/api.php",
 					dataType: "jsonp",
 					data: {
-						q: request.term,
-						hl: search.lang.hl()
+						search: request.term,
+						action: "opensearch"
 					},
 					success: function(data) {
 						response($.map(data[1], function(item) {
-							return item[0];
+							return item;
 						}));
 					}
 				});
@@ -616,7 +628,7 @@
 		</div>
 		<div id="dictionary"></div>
 		<footer>
-			<span>Powered by <a href="http://googlesystem.blogspot.com/2009/12/on-googles-unofficial-dictionary-api.html" target="_blank">Google's Unofficial Dictionary API</a></span>
+			<span>Powered by <a href="http://googlesystem.blogspot.com/2009/12/on-googles-unofficial-dictionary-api.html" target="_blank">Google's Unofficial Dictionary API</a> & <a href="http://www.wiktionary.org/w/api.php" target="_blank">MediaWiki API</a></span>
 		</footer>
 	</body>
 </html>

@@ -1,5 +1,5 @@
 # Dictioanry
-This is a dictionary based on [Google's Unofficial Dictionary API](http://googlesystem.blogspot.com/2009/12/on-googles-unofficial-dictionary-api.html)
+This is a dictionary based on [Google's Unofficial Dictionary API](http://googlesystem.blogspot.com/2009/12/on-googles-unofficial-dictionary-api.html) & [MediaWiki API](http://www.wiktionary.org/w/api.php)
 
 [Demo](http://dictionary.easisee.com/)
 
