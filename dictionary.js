@@ -285,6 +285,32 @@ config = {
 				}
 			}
 			return config.lang.defaultdata;
+		},
+		transform: {
+			abbr: function(lang) {
+				switch(lang) {
+					case "zh-hans":
+					case "zh-hant":
+						return "zh";
+					break;
+					default:
+						return lang;
+					break;
+				}
+			},
+			normal: function(lang) {
+				switch(lang) {
+					case "zh-hans":
+						return "zh-CN";
+					break;
+					case "zh-hant":
+						return "zh-TW";
+					break;
+					default:
+						return lang;
+					break;
+				}
+			}	
 		}
 	}
 }
@@ -439,32 +465,6 @@ search = {
 					return false;
 				}
 			}
-		},
-		hl: function() {
-			var pair = search.lang.get();
-			switch(pair.sl) {
-				case "zh-hans":
-					return "zh-CN";
-				break;
-				case "zh-hant":
-					return "zh-TW";
-				break;
-				default:
-					return pair.sl;
-				break;
-			}
-		},
-		shorthl: function() {
-			var pair = search.lang.get();
-			switch(pair.sl) {
-				case "zh-hans":
-				case "zh-hant":
-					return "zh";
-				break;
-				default:
-					return pair.sl;
-				break;
-			}
 		}
 	},
 	match: function() {
@@ -485,9 +485,13 @@ search = {
 			})
 		);
 	},
-	google: function() {
-		var q = $("#query").val();
-		window.open("http://www.google.com/search?q="+q+"&tbs=dfn:1&defl="+search.lang.hl());
+	translate: function(query) {
+		var lang = search.lang.get();
+		window.open("http://translate.google.com/#" + config.lang.transform.normal(lang.sl) + "|" + config.lang.transform.normal(lang.tl) + "|" + query);
+		return false;
+	},
+	google: function(query) {
+		window.open("http://www.google.com/#q=" + query + "&tbs=dfn:1&defl=" + search.lang.get().sl);
 		return false;
 	}
 }
@@ -557,7 +561,7 @@ $(document).ready(function() {
 	$("#query").autocomplete({
 		source: function( request, response ) {
 			$.ajax({
-				url: "http://" + search.lang.shorthl() + ".wiktionary.org/w/api.php",
+				url: "http://" + config.lang.transform.abbr(search.lang.get().sl) + ".wiktionary.org/w/api.php",
 				dataType: "jsonp",
 				data: {
 					search: request.term,

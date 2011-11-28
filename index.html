@@ -29,8 +29,9 @@
 						<span class="swapper"></span>
 					</div>
 					<input type="text" id="query" autofocus="autofocus" />
-					<button type="submit">Search</button>
-					<button type="button" onclick="search.google()">Google</button>
+					<button type="submit">Define</button>
+					<button type="button" onclick="search.translate($('#query').val());">Translate</button>
+					<button type="button" onclick="search.google($('#query').val());">Google</button>
 					<button type="button" id="example" onclick="toggleexample();">Example</button>
 				</form>
 			</div>
