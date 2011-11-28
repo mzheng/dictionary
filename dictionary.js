@@ -486,8 +486,9 @@ search = {
 		);
 	},
 	translate: function(query) {
-		var lang = search.lang.get();
-		window.open("http://translate.google.com/#" + config.lang.transform.normal(lang.sl) + "|" + config.lang.transform.normal(lang.tl) + "|" + query);
+		var lang = search.lang.get(), sl = lang.sl, tl = config.lang.transform.normal(lang.tl);
+		sl = (sl=="zh-hant")?"zh-CN":config.lang.transform.normal(sl);
+		window.open("http://translate.google.com/#" + sl + "|" + tl + "|" + query);
 		return false;
 	},
 	google: function(query) {
