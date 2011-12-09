@@ -8,8 +8,8 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="dictionary.js"></script>
 <!--[if IE 8]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -23,15 +23,9 @@
 		<div id="toolbox">
 			<div id="search">
 				<form action="javascript:search.submit($('#query').val());">
-					<select id="lang">
-					</select>
-					<div id="swapper" onclick="search.swapper();">
-						<span class="swapper"></span>
-					</div>
+					<select id="lang"></select>
 					<input type="text" id="query" autofocus="autofocus" />
 					<button type="submit">Define</button>
-					<button type="button" onclick="search.translate($('#query').val());">Translate</button>
-					<button type="button" onclick="search.google($('#query').val());">Google</button>
 					<button type="button" id="example" onclick="toggleexample();">Example</button>
 				</form>
 			</div>

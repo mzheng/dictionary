@@ -1,322 +1,63 @@
 config = {
 	title: "Dictionary",
-	indicator: {
-		query: ";",
-		lang: ">"
-	},
+	indicator: ";",
 	displayexample: true,
 	lang: {
-		defaultdata: {
-			sl: "en",
-			tl: "en",
-			text: "English dictionary"
+		def: {
+			code: "en",
+			text: "English"
 		},
 		data: [{
-			sl: "ar",
-			tl: "en",
-			text: "Arabic -> English"
+			code: "zh-hans",
+			text: "Chinese (Simplified)"
 		}, {
-			sl: "bn",
-			tl: "en",
-			text: "Bengali -> English"
+			code: "zh-hant",
+			text: "Chinese (Traditional)"
 		}, {
-			sl: "bg",
-			tl: "en",
-			text: "Bulgarian -> English"
+			code: "cs",
+			text: "Czech"
 		}, {
-			sl: "zh-hans",
-			tl: "zh-hans",
-			text: "Chinese (Simplified) dictionary"
+			code: "nl",
+			text: "Dutch"
 		}, {
-			sl: "zh-hans",
-			tl: "en",
-			text: "Chinese (Simplified) -> English"
+			code: "en",
+			text: "English"
 		}, {
-			sl: "zh-hant",
-			tl: "zh-hant",
-			text: "Chinese (Traditional) dictionary"
+			code: "fr",
+			text: "French"
 		}, {
-			sl: "zh-hant",
-			tl: "en",
-			text: "Chinese (Traditional) -> English"
+			code: "de",
+			text: "German"
 		}, {
-			sl: "hr",
-			tl: "en",
-			text: "Croatian -> English"
+			code: "it",
+			text: "Italian"
 		}, {
-			sl: "cs",
-			tl: "cs",
-			text: "Czech dictionary"
+			code: "ko",
+			text: "Korean"
 		}, {
-			sl: "cs",
-			tl: "en",
-			text: "Czech -> English"
+			code: "pt",
+			text: "Portuguese"
 		}, {
-			sl: "nl",
-			tl: "nl",
-			text: "Dutch dictionary"
+			code: "ru",
+			text: "Russian"
 		}, {
-			sl: "en",
-			tl: "ar",
-			text: "English -> Arabic"
-		}, {
-			sl: "en",
-			tl: "bn",
-			text: "English -> Bengali"
-		}, {
-			sl: "en",
-			tl: "bg",
-			text: "English -> Bulgarian"
-		}, {
-			sl: "en",
-			tl: "zh-hans",
-			text: "English -> Chinese (Simplified)"
-		}, {
-			sl: "en",
-			tl: "zh-hant",
-			text: "English -> Chinese (Traditional)"
-		}, {
-			sl: "en",
-			tl: "hr",
-			text: "English -> Croatian"
-		}, {
-			sl: "en",
-			tl: "cs",
-			text: "English -> Czech"
-		}, {
-			sl: "en",
-			tl: "en",
-			text: "English dictionary"
-		}, {
-			sl: "en",
-			tl: "fi",
-			text: "English -> Finnish"
-		}, {
-			sl: "en",
-			tl: "fr",
-			text: "English -> French"
-		}, {
-			sl: "en",
-			tl: "de",
-			text: "English -> German"
-		}, {
-			sl: "en",
-			tl: "el",
-			text: "English -> Greek"
-		}, {
-			sl: "en",
-			tl: "gu",
-			text: "English -> Gujarati"
-		}, {
-			sl: "en",
-			tl: "iw",
-			text: "English -> Hebrew"
-		}, {
-			sl: "en",
-			tl: "hi",
-			text: "English -> Hindi"
-		}, {
-			sl: "en",
-			tl: "it",
-			text: "English -> Italian"
-		}, {
-			sl: "en",
-			tl: "kn",
-			text: "English -> Kannada"
-		}, {
-			sl: "en",
-			tl: "ko",
-			text: "English -> Korean"
-		}, {
-			sl: "en",
-			tl: "ml",
-			text: "English -> Malayalam"
-		}, {
-			sl: "en",
-			tl: "mr",
-			text: "English -> Marathi"
-		}, {
-			sl: "en",
-			tl: "pt",
-			text: "English -> Portuguese"
-		}, {
-			sl: "en",
-			tl: "ru",
-			text: "English -> Russian"
-		}, {
-			sl: "en",
-			tl: "sr",
-			text: "English -> Serbian"
-		}, {
-			sl: "en",
-			tl: "es",
-			text: "English -> Spanish"
-		}, {
-			sl: "en",
-			tl: "ta",
-			text: "English -> Tamil"
-		}, {
-			sl: "en",
-			tl: "te",
-			text: "English -> Telugu"
-		}, {
-			sl: "en",
-			tl: "th",
-			text: "English -> Thai"
-		}, {
-			sl: "fi",
-			tl: "en",
-			text: "Finnish -> English"
-		}, {
-			sl: "fr",
-			tl: "en",
-			text: "French -> English"
-		}, {
-			sl: "fr",
-			tl: "fr",
-			text: "French dictionary"
-		}, {
-			sl: "de",
-			tl: "en",
-			text: "German -> English"
-		}, {
-			sl: "de",
-			tl: "de",
-			text: "German dictionary"
-		}, {
-			sl: "el",
-			tl: "en",
-			text: "Greek -> English"
-		}, {
-			sl: "gu",
-			tl: "en",
-			text: "Gujarati -> English"
-		}, {
-			sl: "iw",
-			tl: "en",
-			text: "Hebrew -> English"
-		}, {
-			sl: "hi",
-			tl: "en",
-			text: "Hindi -> English"
-		}, {
-			sl: "it",
-			tl: "en",
-			text: "Italian -> English"
-		}, {
-			sl: "it",
-			tl: "it",
-			text: "Italian dictionary"
-		}, {
-			sl: "kn",
-			tl: "en",
-			text: "Kannada -> English"
-		}, {
-			sl: "ko",
-			tl: "en",
-			text: "Korean -> English"
-		}, {
-			sl: "ko",
-			tl: "ko",
-			text: "Korean dictionary"
-		}, {
-			sl: "ml",
-			tl: "en",
-			text: "Malayalam -> English"
-		}, {
-			sl: "mr",
-			tl: "en",
-			text: "Marathi -> English"
-		}, {
-			sl: "pt",
-			tl: "en",
-			text: "Portuguese -> English"
-		}, {
-			sl: "pt",
-			tl: "pt",
-			text: "Portuguese dictionary"
-		}, {
-			sl: "ru",
-			tl: "en",
-			text: "Russian -> English"
-		}, {
-			sl: "ru",
-			tl: "ru",
-			text: "Russian dictionary"
-		}, {
-			sl: "sr",
-			tl: "en",
-			text: "Serbian -> English"
-		}, {
-			sl: "sk",
-			tl: "sk",
-			text: "Slovak dictionary"
-		}, {
-			sl: "es",
-			tl: "en",
-			text: "Spanish -> English"
-		}, {
-			sl: "es",
-			tl: "es",
-			text: "Spanish dictionary"
-		}, {
-			sl: "ta",
-			tl: "en",
-			text: "Tamil -> English"
-		}, {
-			sl: "te",
-			tl: "en",
-			text: "Telugu -> English"
-		}, {
-			sl: "th",
-			tl: "en",
-			text: "Thai -> English"
+			code: "es",
+			text: "Spanish"
 		}],
-		verify: function(pair) {
-			if(pair[0]=="") {
-				pair[0] = config.lang.defaultdata.sl;
-			}
-			if(pair[1]=="") {
-				pair[1] = config.lang.defaultdata.tl;
-			}
+		verify: function(code) {
 			for(var i in config.lang.data) {
-				if(config.lang.data[i]["sl"]==pair[0].toLowerCase() && config.lang.data[i]["tl"]==pair[1].toLowerCase()) {
+				if(config.lang.data[i].code==code) {
 					return config.lang.data[i];
 				}
 			}
-			return config.lang.defaultdata;
-		},
-		transform: {
-			abbr: function(lang) {
-				switch(lang) {
-					case "zh-hans":
-					case "zh-hant":
-						return "zh";
-					break;
-					default:
-						return lang;
-					break;
-				}
-			},
-			normal: function(lang) {
-				switch(lang) {
-					case "zh-hans":
-						return "zh-CN";
-					break;
-					case "zh-hant":
-						return "zh-TW";
-					break;
-					default:
-						return lang;
-					break;
-				}
-			}	
+			return config.lang.def;
 		}
 	}
 }
 
 dictionary = {
-	init: function(){
+	init: function() {
+		search.match();
 		var query = hash.query.get(), lang = hash.lang.get();
 		if(query=="") {
 			$("#dictionary").hide();
@@ -332,8 +73,8 @@ dictionary = {
 				dataType: "jsonp",
 				data: {
 					q: query,
-					sl: lang.sl,
-					tl: lang.tl,
+					sl: lang.code,
+					tl: lang.code,
 					restrict: "pr,de"
 				},
 				success: function(data) {
@@ -424,43 +165,32 @@ jsontohtml = function(json, type) {
 
 hash = {
 	get: function() {
-		return decodeURI(window.location.hash);
-	},
-	change: {
-		callback: function() {
-			search.match();
-			dictionary.init();
-		}
+		return decodeURI(window.location.hash).substr(1).split(config.indicator, 2);
 	},
 	query: {
 		get: function() {
-			return hash.get().substr(1).split(config.indicator.query, 1)[0];
+			return hash.get()[0];
 		}
 	},
 	lang: {
 		get: function() {
-			var pair = hash.get().split(config.indicator.query, 2);
-			return config.lang.verify((pair[1])?pair[1].split(config.indicator.lang, 2):new Array("", ""));
+			return config.lang.verify(hash.get()[1]);
 		}
 	}
 }
 
 search = {
 	submit: function(query) {
-		window.location.href = "#" + query + config.indicator.query + $("#lang").val();
+		window.location.href = "#" + query + config.indicator + search.lang.get();
 	},
 	lang: {
 		get: function() {
-			var pair = $("#lang").val().split(config.indicator.lang);
-			return new Object({
-				sl: pair[0],
-				tl: pair[1]
-			});
+			return $("#lang").val();
 		},
-		set: function(pair) {
-			var swp = document.getElementById("lang"), spair = pair.sl + config.indicator.lang + pair.tl;
+		set: function(lang) {
+			var swp = document.getElementById("lang");
 			for(i=0;i<swp.options.length;i++) {
-				if(swp.options[i].value==spair) {
+				if(swp.options[i].value==lang.code) {
 					swp.options[i].selected = true;
 					return false;
 				}
@@ -468,32 +198,22 @@ search = {
 		}
 	},
 	match: function() {
-		var spair = search.lang.get(), hpair = hash.lang.get();
-		if(spair.sl!=hpair.sl||spair.tl!=hpair.tl) {
-			search.lang.set(hpair);
+		var scode = search.lang.get(), hlang = hash.lang.get();
+		if(scode!=hlang.code) {
+			search.lang.set(hlang);
 		}
 		if($("#query").val()!=hash.query.get()) {
 			$("#query").val(hash.query.get());
 		}
 	},
-	swapper: function() {
-		var pair = search.lang.get();
-		search.lang.set(
-			new Object({
-				sl: pair.tl,
-				tl: pair.sl
-			})
-		);
-	},
-	translate: function(query) {
-		var lang = search.lang.get(), sl = lang.sl, tl = config.lang.transform.normal(lang.tl);
-		sl = (sl=="zh-hant")?"zh-CN":config.lang.transform.normal(sl);
-		window.open("http://translate.google.com/#" + sl + "|" + tl + "|" + query);
-		return false;
-	},
-	google: function(query) {
-		window.open("http://www.google.com/#q=" + query + "&tbs=dfn:1&defl=" + search.lang.get().sl);
-		return false;
+	init_select: function() {
+		search.options = [];
+		for(var i in config.lang.data) {
+			search.options[i] = document.createElement("option");
+			search.options[i].value = config.lang.data[i].code;
+			search.options[i].text = config.lang.data[i].text;
+			document.getElementById("lang").add(search.options[i], null);
+		}
 	}
 }
 
@@ -544,25 +264,18 @@ toggleexample = function() {
 }
 
 $(document).ready(function() {
-	window.onhashchange = hash.change.callback;
-	search.options = new Array();
-	for(var i in config.lang.data) {
-		search.options[i] = document.createElement("option");
-		search.options[i].value = config.lang.data[i].sl + config.indicator.lang + config.lang.data[i].tl;
-		search.options[i].text = config.lang.data[i].text;
-		document.getElementById("lang").add(search.options[i], null);
-	}
+	window.onhashchange = dictionary.init;
+	search.init_select();
 	sound.test();
 	if(window.location.hash) {
-		search.match();
 		dictionary.init();
 	} else {
-		search.lang.set(config.lang.defaultdata);
+		search.lang.set(config.lang.def);
 	}
 	$("#query").autocomplete({
 		source: function( request, response ) {
 			$.ajax({
-				url: "http://" + config.lang.transform.abbr(search.lang.get().sl) + ".wiktionary.org/w/api.php",
+				url: "http://" + search.lang.get().substr(0, 2) + ".wiktionary.org/w/api.php",
 				dataType: "jsonp",
 				data: {
 					search: request.term,
