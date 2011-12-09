@@ -94,20 +94,6 @@ footer>span {
 	display: inline-block;
 	vertical-align: top;
 }
-#search>form>#lang {
-}
-#search>form>#swapper {
-}
-span.swapper {
-	background: url(swapper.png) 3px 2px no-repeat;
-	opacity: .6;
-	width: 22px;
-	height: 22px;	
-	display: inline-block;
-}
-div#swapper:hover span.swapper:hover {
-	opacity: .8;
-}
 #dictionary {
 	margin-top: 55px;
 }
